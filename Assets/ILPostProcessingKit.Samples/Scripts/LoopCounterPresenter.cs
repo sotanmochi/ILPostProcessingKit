@@ -12,6 +12,11 @@ namespace ILPostProcessingKit.Samples
 
         void LateUpdate()
         {
+            UpdateView();
+        }
+
+        void UpdateView()
+        {
             _countViewA.text = $"FrameCount: {_counterA.LoopCount}";
             _countViewB.text = $"OddFrames: {_counterB.OddFrameCount}, EvenFrames: {_counterB.EvenFrameCount}";
         }
