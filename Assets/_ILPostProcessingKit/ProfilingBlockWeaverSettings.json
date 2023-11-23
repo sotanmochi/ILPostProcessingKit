@@ -1,0 +1,24 @@
+{
+    "TargetAssemblyNamePatterns": [
+        "Assembly-CSharp",
+        "ILPostProcessingKit.Samples*"
+    ],
+    "TargetInfoList": [
+        {
+            "IsBaseType": true,
+            "TypeName": "MonoBehaviour",
+            "MethodNames": [
+                "Update",
+                "FixedUpdate",
+                "LateUpdate"
+            ]
+        },
+        {
+            "IsBaseType": false,
+            "TypeName": "LoopCounterPresenter",
+            "MethodNames": [
+                "UpdateView"
+            ]
+        }
+    ]
+}
