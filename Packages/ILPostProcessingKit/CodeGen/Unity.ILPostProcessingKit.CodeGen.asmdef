@@ -1,0 +1,23 @@
+{
+    "name": "Unity.ILPostProcessingKit.CodeGen",
+    "rootNamespace": "Unity.ILPostProcessingKit.CodeGen",
+    "references": [
+        "Unity.ILPostProcessingKit.Json"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [
+        "Mono.Cecil.dll",
+        "Mono.Cecil.Mdb.dll",
+        "Mono.Cecil.Pdb.dll",
+        "Mono.Cecil.Rocks.dll"
+    ],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
