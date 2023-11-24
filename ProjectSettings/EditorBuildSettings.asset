@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/ILPostProcessingKit.Samples/Sample.unity
+    guid: 0f78ede282f635c4fbe78bf359da858a
   m_configObjects: {}
