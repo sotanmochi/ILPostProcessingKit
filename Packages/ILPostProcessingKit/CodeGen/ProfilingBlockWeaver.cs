@@ -62,7 +62,7 @@ namespace Unity.ILPostProcessingKit.CodeGen
                     {
                         if (targetBaseType.MethodNames.Contains(methodDefinition.Name))
                         {
-                            _diagnostics.AddWarning($"<color=cyan>[{nameof(ProfilingBlockWeaver)}] Insert profiling block to '{typeDefinition.Name}.{methodDefinition.Name}'</color>");
+                            _diagnostics.AddWarning($"<color=cyan>[{nameof(ProfilingBlockWeaver)}] Insert profiling block to '{typeDefinition.FullName}.{methodDefinition.Name}'</color>");
                             InsertProfilingBlock(assemblyDefinition, typeDefinition, methodDefinition);
                         }
                     }
@@ -74,7 +74,7 @@ namespace Unity.ILPostProcessingKit.CodeGen
                     {
                         if (targetType.MethodNames.Contains(methodDefinition.Name))
                         {
-                            _diagnostics.AddWarning($"<color=cyan>[{nameof(ProfilingBlockWeaver)}] Insert profiling block to '{typeDefinition.Name}.{methodDefinition.Name}'</color>");
+                            _diagnostics.AddWarning($"<color=cyan>[{nameof(ProfilingBlockWeaver)}] Insert profiling block to '{typeDefinition.FullName}.{methodDefinition.Name}'</color>");
                             InsertProfilingBlock(assemblyDefinition, typeDefinition, methodDefinition);
                         }
                     }
@@ -99,7 +99,7 @@ namespace Unity.ILPostProcessingKit.CodeGen
                 typeof(UnityEngine.Profiling.Profiler).GetMethod("EndSample"));
 
             // Add instructions to execute Profiler.BeginSample at the beginning of the method.
-            var methodFullName = $"{typeDefinition.Namespace}.{typeDefinition.Name}.{methodDefinition.Name}";
+            var methodFullName = $"{typeDefinition.FullName}.{methodDefinition.Name}";
             processor.InsertBefore(firstInstruction, processor.Create(OpCodes.Ldstr, methodFullName)); // Push the method name onto the stack.
             processor.InsertBefore(firstInstruction, processor.Create(OpCodes.Call, beginSampleRef));
 
