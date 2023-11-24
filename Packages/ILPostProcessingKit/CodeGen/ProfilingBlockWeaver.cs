@@ -14,6 +14,13 @@ namespace Unity.ILPostProcessingKit.CodeGen
     {
         public static readonly string SettingsFilePath = "Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json";
 
+        public static readonly bool IsEnable =
+#if ENABLE_PROFILING_BLOCK_WEAVER
+            true;
+#else
+            false;
+#endif
+
         class TargetInfo
         {
             public bool IsBaseType;
@@ -34,6 +41,7 @@ namespace Unity.ILPostProcessingKit.CodeGen
         public override ILPostProcessResult Process(ICompiledAssembly compiledAssembly)
         {
             var assemblyDefinition = CodeGenHelpers.AssemblyDefinitionFor(compiledAssembly);
+
             ImportSettings();
 
             var assemblyNamPatternMatched = false;
@@ -47,6 +55,12 @@ namespace Unity.ILPostProcessingKit.CodeGen
 
             if (!assemblyNamPatternMatched)
             {
+                return CodeGenHelpers.GetResult(assemblyDefinition, _diagnostics);
+            }
+
+            if (!IsEnable)
+            {
+                _diagnostics.AddWarning($"<color=orange>[{nameof(ProfilingBlockWeaver)}] IsEnable: {IsEnable}</color>");
                 return CodeGenHelpers.GetResult(assemblyDefinition, _diagnostics);
             }
 
