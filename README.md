@@ -31,6 +31,10 @@ ILPostProcessor for Unity
 }
 ```
 
+<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_Build.png" width="60%">
+
+<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DevelopmentBuild.png" width="60%">
+
 ### C# (original source code)
 ```cs
 using UnityEngine;
