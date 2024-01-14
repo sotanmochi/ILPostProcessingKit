@@ -618,7 +618,22 @@ PlayerSettings:
   webGLDecompressionFallback: 0
   webGLPowerPreference: 2
   scriptingDefineSymbols:
+    Android: ENABLE_PROFILING_BLOCK_WEAVER
+    EmbeddedLinux: ENABLE_PROFILING_BLOCK_WEAVER
+    GameCoreScarlett: ENABLE_PROFILING_BLOCK_WEAVER
+    GameCoreXboxOne: ENABLE_PROFILING_BLOCK_WEAVER
+    LinuxHeadlessSimulation: ENABLE_PROFILING_BLOCK_WEAVER
+    Lumin: ENABLE_PROFILING_BLOCK_WEAVER
+    Nintendo Switch: ENABLE_PROFILING_BLOCK_WEAVER
+    PS4: ENABLE_PROFILING_BLOCK_WEAVER
+    PS5: ENABLE_PROFILING_BLOCK_WEAVER
+    Stadia: ENABLE_PROFILING_BLOCK_WEAVER
     Standalone: ENABLE_PROFILING_BLOCK_WEAVER
+    WebGL: ENABLE_PROFILING_BLOCK_WEAVER
+    Windows Store Apps: ENABLE_PROFILING_BLOCK_WEAVER
+    XboxOne: ENABLE_PROFILING_BLOCK_WEAVER
+    iPhone: ENABLE_PROFILING_BLOCK_WEAVER
+    tvOS: ENABLE_PROFILING_BLOCK_WEAVER
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}
