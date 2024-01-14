@@ -2,48 +2,6 @@
 ILPostProcessor for Unity
 
 ## ProfilingBlockWeaver
-### Settings
-Add settings file to your project.
-
-`Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json`
-```json
-{
-    "TargetAssemblyNamePatterns": [
-        "Assembly-CSharp",
-        "ILPostProcessingKit.Samples*"
-    ],
-    "TargetInfoList": [
-        {
-            "IsBaseType": true,
-            "TypeName": "MonoBehaviour",
-            "MethodNames": [
-                "Update",
-                "FixedUpdate",
-                "LateUpdate"
-            ]
-        },
-        {
-            "IsBaseType": false,
-            "TypeName": "LoopCounterPresenter",
-            "MethodNames": [
-                "UpdateView"
-            ]
-        }
-    ]
-}
-```
-
-### Symbol
-Add symbol to your project.
-
-<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DefineSymbols.png">
-
-### Build
-
-<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_Build.png">
-
-<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DevelopmentBuild.png">
-
 ### C# (original source code)
 ```cs
 using UnityEngine;
@@ -191,3 +149,44 @@ public class LoopCounterPresenter : MonoBehaviour
     }
 }
 ```
+
+### Settings
+Add settings file to your project.
+
+`Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json`
+```json
+{
+    "TargetAssemblyNamePatterns": [
+        "Assembly-CSharp",
+        "ILPostProcessingKit.Samples*"
+    ],
+    "TargetInfoList": [
+        {
+            "IsBaseType": true,
+            "TypeName": "MonoBehaviour",
+            "MethodNames": [
+                "Update",
+                "FixedUpdate",
+                "LateUpdate"
+            ]
+        },
+        {
+            "IsBaseType": false,
+            "TypeName": "LoopCounterPresenter",
+            "MethodNames": [
+                "UpdateView"
+            ]
+        }
+    ]
+}
+```
+
+Add symbol to your project.
+
+<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DefineSymbols.png">
+
+### Build
+
+<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_Build.png">
+
+<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DevelopmentBuild.png">
