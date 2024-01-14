@@ -3,6 +3,8 @@ ILPostProcessor for Unity
 
 ## ProfilingBlockWeaver
 ### Settings
+Add settings file to your project.
+
 `Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json`
 ```json
 {
@@ -30,6 +32,13 @@ ILPostProcessor for Unity
     ]
 }
 ```
+
+### Symbol
+Add symbol to your project.
+
+<img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DefineSymbols.png">
+
+### Build
 
 <img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_Build.png">
 
