@@ -182,6 +182,19 @@ Add settings file.
 }
 ```
 
+Install package via editing Packages/manifest.json directly.
+
+```json
+// Packages/manifest.json
+{
+  "dependencies": {
+    // ...
+    "jp.sotanmochi.ilpostprocessingkit": "https://github.com/sotanmochi/ILPostProcessingKit.git?path=Packages/ILPostProcessingKit#v1.2.0",
+    // ...
+  }
+}
+```
+
 Add define symbol.
 
 <img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DefineSymbols.png">
