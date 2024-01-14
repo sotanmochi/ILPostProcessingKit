@@ -2,39 +2,6 @@
 ILPostProcessor for Unity
 
 ## ProfilingBlockWeaver
-### Settings
-`Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json`
-```json
-{
-    "TargetAssemblyNamePatterns": [
-        "Assembly-CSharp",
-        "ILPostProcessingKit.Samples*"
-    ],
-    "TargetInfoList": [
-        {
-            "IsBaseType": true,
-            "TypeName": "MonoBehaviour",
-            "MethodNames": [
-                "Update",
-                "FixedUpdate",
-                "LateUpdate"
-            ]
-        },
-        {
-            "IsBaseType": false,
-            "TypeName": "LoopCounterPresenter",
-            "MethodNames": [
-                "UpdateView"
-            ]
-        }
-    ]
-}
-```
-
-<img src="./Documents~/ILPostProcessingKit_Build.png">
-
-<img src="./Documents~/ILPostProcessingKit_DevelopmentBuild.png">
-
 ### C# (original source code)
 ```cs
 using UnityEngine;
@@ -182,3 +149,45 @@ public class LoopCounterPresenter : MonoBehaviour
     }
 }
 ```
+
+### Setup
+Add settings file.
+
+`Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json`
+```json
+// Example of ProfilingBlockWeaverSettings.json
+{
+    "TargetAssemblyNamePatterns": [
+        "Assembly-CSharp",
+        "ILPostProcessingKit.Samples*"
+    ],
+    "TargetInfoList": [
+        {
+            "IsBaseType": true,
+            "TypeName": "MonoBehaviour",
+            "MethodNames": [
+                "Update",
+                "FixedUpdate",
+                "LateUpdate"
+            ]
+        },
+        {
+            "IsBaseType": false,
+            "TypeName": "LoopCounterPresenter",
+            "MethodNames": [
+                "UpdateView"
+            ]
+        }
+    ]
+}
+```
+
+Add define symbol.
+
+<img src="./Documents~/ILPostProcessingKit_DefineSymbols.png">
+
+### Build
+
+<img src="./Documents~/ILPostProcessingKit_Build.png">
+
+<img src="./Documents~/ILPostProcessingKit_DevelopmentBuild.png">

@@ -150,11 +150,12 @@ public class LoopCounterPresenter : MonoBehaviour
 }
 ```
 
-### Settings
-Add settings file to your project.
+### Setup
+Add settings file.
 
 `Assets/_ILPostProcessingKit/ProfilingBlockWeaverSettings.json`
 ```json
+// Example of ProfilingBlockWeaverSettings.json
 {
     "TargetAssemblyNamePatterns": [
         "Assembly-CSharp",
@@ -181,7 +182,7 @@ Add settings file to your project.
 }
 ```
 
-Add symbol to your project.
+Add define symbol.
 
 <img src="./Packages/ILPostProcessingKit/Documents~/ILPostProcessingKit_DefineSymbols.png">
 
